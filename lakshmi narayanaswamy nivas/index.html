@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>SERVICE APARTMENT - Lakshmi Narayanaswamy Nivas</h1>
+
+    <!-- Booking Form -->
+    <form id="bookingForm">
+        <label for="tenantName">Tenant Name:</label>
+        <input type="text" id="tenantName" required>
+
+        <label for="tenantPhone">Tenant Phone:</label>
+        <input type="text" id="tenantPhone" required>
+
+        <label for="checkIn">Check-In Date (DD-MM-YYYY):</label>
+        <input type="text" id="checkIn" placeholder="DD-MM-YYYY" required>
+
+        <label for="checkOut">Check-Out Date (DD-MM-YYYY):</label>
+        <input type="text" id="checkOut" placeholder="DD-MM-YYYY" required>
+
+        <label for="roomType">Room Type:</label>
+        <select id="roomType" required>
+            <option value="1 BHK">1 BHK</option>
+            <option value="2 BHK">2 BHK</option>
+        </select>
+
+        <label for="roomNo">Room No:</label>
+        <input type="text" id="roomNo" required>
+
+        <label for="committedAmount">Committed Amount (Rs):</label>
+        <input type="number" id="committedAmount" required>
+
+        <label for="paymentReceived">Payment Received (Rs):</label>
+        <input type="number" id="paymentReceived" required>
+
+        <label for="balanceAmount">Balance Amount (Rs):</label>
+        <input type="number" id="balanceAmount" disabled>
+
+        <button type="submit">Add Booking</button>
+
+        <!-- Hidden field to keep track of row index for editing -->
+        <input type="hidden" id="editingRowIndex">
+    </form>
+
+    <!-- Booking Details Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Tenant Name</th>
+                <th>Phone Number</th>
+                <th>Check-In Date</th>
+                <th>Check-Out Date</th>
+                <th>Room Type</th>
+                <th>Room No</th>
+                <th>Committed Amount</th>
+                <th>Payment Received</th>
+                <th>Balance Amount</th>
+                <th>Payment Done</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="bookingDetails">
+            <!-- Rows will be inserted here by JavaScript -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
